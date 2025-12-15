@@ -20,16 +20,16 @@ function draw(deck){
 }
 
 function getValueCards(cards){
-    let value = 0
-    let ace = 0
+    let value = 0;
+    let ace = 0;
     for (let card of cards) { //remplacé for (card in cards) par for (let card of cards)
-        let v = card.split()[0] //remplacé cards.split par card.split
+        let v = card.split(" ")[0].trim(); //remplacé cards.split par card.split
         if (!isNaN(parseInt(v))) { //isdigit c en python, remplacé par isNan
-            value += parseInt(v) //parseInt au lieu de int
+            value += parseInt(v); //parseInt au lieu de int
         }else if (["Valet", "Dame", "Roi"].includes(v)){ //tab.includes(valeur) en JS
-            value += 10
+            value += 10;
         }else 
-            ace += 1
+            ace += 1;
     }
 
     value += ace * 11
@@ -61,29 +61,76 @@ while (true){
     }
 
     let deck = initCards()
-    cash, bet = to_bet(cash)
+    let bet = to_bet(cash)
     cash -= bet
-    let playerCards = [] //comprendre erreur : les variables ne commencent pas par un chiffre
+    let playerCards = [] //comprendre erreur
     let dealerCards = []
     let perdu = false
 
-    card, deck = draw(deck)
-    playerCards.append(card)
-    card, deck = draw(deck)
-    playerCards.append(card)
+    playerCards.push(draw(deck))
+    dealerCards.push(draw(deck))
+    playerCards.push(draw(deck))
 
-    card, deck = draw(deck)
-    dealerCards.append(card)
+    let card = draw(deck)
+    dealerCards.push(card)
     
     let valuePlayer = getValueCards(playerCards)
     let valueDealer = getValueCards(dealerCards)
 
-    displayCads("Croupier " , dealerCards, valueDealer)
-    displayCads("Joueur " , playerCards, valuePlayer)
+    displayCards("Croupier " , dealerCards, valueDealer)
+    displayCards("Joueur " , playerCards, valuePlayer)
 
     while (true){
-        //continuer l.75
+        let pioche = prompt("Voulez-vous piocher ? (o/n)") //remplacer prompt par input
+        while (!(["o", "oui", "n", "non"].includes(pioche.toLowerCase()))){
+            pioche = prompt("voulez vous piocher ? (o/n)")
+        }if (pioche.toLowerCase() == "n"){
+            break;
+        }
+        let card = draw(deck)
+        playerCards.push(card)
+        valuePlayer = getValueCards(playerCards)
+        console.log()//print
+        displayCards("Croupier " , dealerCards, valueDealer)
+        displayCards("Joueur " , playerCards, valuePlayer)
+        console.log()
+        if (valuePlayer > 21){
+            perdu = true
+            break
+        }
+    }
+
+    if (!perdu){
+        while (valueDealer <= valuePlayer && valueDealer < 21){
+            let card = draw(deck)
+            dealerCards.push(card)
+            valueDealer = getValueCards(dealerCards)
+        }
+        console.log()
+        displayCards("Croupier" , dealerCards, valueDealer)
+        displayCards("Joueur" , playerCards, valuePlayer)
+        console.log()
+    }
+    if (valuePlayer > 21){
+        console.log("Vous avez perdu !")
+    }else if (valueDealer > 21){
+        console.log("Vous avez gagné ! $" + bet * 2 + "!")
+        cash += bet * 2
+    }else if (valueDealer == valuePlayer){
+        console.log("Egalité !")
+        cash += bet
+    }else if (valueDealer > valuePlayer){
+        console.log("Vous avez perdu !")
+    }else{
+        console.log("Vous avez gagné" + bet*2 +" !")
+        cash += bet * 2
+    }
+
+    let quitGame = prompt("Voulez vous continuer la partie ? (o/n)")
+    while (!(["o", "n", "oui", "non"].includes(quitGame.toLowerCase()))){
+        quitGame = prompt("Voulez vous continuer la partie ? (o/n)")
+    }
+    if (quitGame.toLowerCase() == "n"){
+        break
     }
 }
-
-//j ai pas compris les erreur ligne 65 66 mais je verais de corriger la prochaine fois
