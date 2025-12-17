@@ -1,0 +1,100 @@
+html, body{
+    background-color: #004D00;
+}
+
+/* main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 825px;
+}
+main h2{
+    border-width: 5px 1px;
+    border-style: groove solid;
+    padding: 2px 80px;
+}
+
+/* jeu en globale*/
+.jeu {
+    display: flex;
+}
+.dealer_game, .player_game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#cartes_croupier,#cartes_joueurs{
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* table de jeu*/
+.table-et-boutons{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7%;
+}
+
+.table-et-boutons .table {
+    border-width: 5px 1px;
+    border-style: groove solid;
+    width: 405px;
+    height: 448px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table .qui_contient_argent div.mise{
+    display: flex;
+    align-content: flex-end;
+    height: 40px;
+}
+.table .qui_contient_argent div.mise input{
+    width: 100px;
+}
+.table .qui_contient_argent div#mise{
+    height: 110px;
+}
+
+.table .qui_contient_argent {
+    display: flex;
+    height: 110px;
+    width: 405px;
+    gap: 80px;
+    justify-content: center;
+    padding: 5px;
+}
+
+.table img{
+    padding: 20%;
+}
+
+
+.table-et-boutons .boutons{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 50px;
+    width: 405px;
+    height: 50px;
+}
+
+.table-et-boutons .boutons .piocher ,.table-et-boutons .boutons .rester{
+    border-radius: 20px;
+    background: linear-gradient(90deg,rgba(255, 215, 0, 1) 0%, rgba(255, 184, 36, 1) 15%, rgba(255, 221, 51, 1) 30%, rgba(255, 231, 115, 1) 45%, rgba(255, 221, 51, 1) 60%, rgba(255, 184, 36, 1) 75%, rgba(237, 221, 83, 1) 100%);
+    border: none;
+    width: 100px;
+    
+}
+
+.table-et-boutons .boutons .piocher:hover ,.table-et-boutons .boutons .rester:hover{
+    cursor: pointer;
+    background: linear-gradient(90deg,rgba(255, 215, 0, 1) 0%, rgba(255, 184, 36, 1) 30%, rgba(255, 221, 51, 1) 45%, rgba(255, 231, 115, 1) 60%, rgba(255, 221, 51, 1) 75%, rgba(255, 184, 36, 1) 90%, rgba(237, 221, 83, 1) 100%);
+}
