@@ -1,35 +1,57 @@
-div {
-    border: 1px solid;
+body {
+    background-image: url("../images/image\ fond\ compte.png");
+    height: 1200px;
+    background-size: 1800px;
+    background-position: center;
 }
 
-
-div.photo_de_profil{
-    display: flex;
-    justify-content: center;
-}
-
-.photo_de_profil img{
-    padding: 5%;
-    width: 15%;
+img.photo_de_profil{
+    width: 20%;
+    height: 20%;
     border-radius: 100%;
 }
 
-.profil {
+/* général */
+
+.information {
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.profil div{
-    width: 50%;
-    padding-left: 1%;
-    background-color: beige;
+div.profil, div.information_solde{
+    width: 600px;
+    padding-left: 10px;
+    background-color: rgb(7, 104, 33);
+    border-radius: 10px;
+    box-shadow: -10px -10px 20px black;
 }
 
-.profil p{
-    width: 90%;
-    height: 40px;
+/* profil */
+
+div.profil{
     display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+div.profil h3{
+    text-align: center;
+}
+
+div.profil div.photo_informations{
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
     align-items: center;
+    justify-content: center;
+}
+div.photo_informations div.informations_personnelles{
+    width: 300px;
+}
+
+/* argent */
+.information_solde h3{
+    text-align: center;
 }

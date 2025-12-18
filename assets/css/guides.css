@@ -1,0 +1,17 @@
+main{
+    height: 600px;
+}
+
+.black-jack{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.black-jack h2{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 30px;
+}

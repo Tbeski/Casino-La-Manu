@@ -7,7 +7,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 825px;
+    height: 1100px;
 }
 main h2{
     border-width: 5px 1px;
@@ -60,7 +60,7 @@ main h2{
     width: 100px;
 }
 .table .qui_contient_argent div#mise{
-    height: 110px;
+    height: 110px;    
 }
 
 .table .qui_contient_argent {
@@ -86,15 +86,19 @@ main h2{
     height: 50px;
 }
 
-.table-et-boutons .boutons .piocher ,.table-et-boutons .boutons .rester{
+.table-et-boutons .boutons .piocher ,.table-et-boutons .boutons .rester,.table-et-boutons .boutons .rejouer{
     border-radius: 20px;
     background: linear-gradient(90deg,rgba(255, 215, 0, 1) 0%, rgba(255, 184, 36, 1) 15%, rgba(255, 221, 51, 1) 30%, rgba(255, 231, 115, 1) 45%, rgba(255, 221, 51, 1) 60%, rgba(255, 184, 36, 1) 75%, rgba(237, 221, 83, 1) 100%);
     border: none;
     width: 100px;
-    
 }
 
-.table-et-boutons .boutons .piocher:hover ,.table-et-boutons .boutons .rester:hover{
-    cursor: pointer;
+.table-et-boutons .boutons .piocher:hover ,.table-et-boutons .boutons .rester:hover,.table-et-boutons .boutons .rejouer:hover{
+    border-radius: 20px;
     background: linear-gradient(90deg,rgba(255, 215, 0, 1) 0%, rgba(255, 184, 36, 1) 30%, rgba(255, 221, 51, 1) 45%, rgba(255, 231, 115, 1) 60%, rgba(255, 221, 51, 1) 75%, rgba(255, 184, 36, 1) 90%, rgba(237, 221, 83, 1) 100%);
+    border: none;
+    width: 100px;
+    cursor: pointer;
 }
+
+

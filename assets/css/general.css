@@ -11,6 +11,11 @@ html,body {
     color: white;
     background-color: rgb(36, 45, 53);
 }
+
+main{
+    margin-left: 10px;
+}
+
 /* Les différentes polices*/
 h1{
     font-size: 0px;
@@ -35,7 +40,7 @@ h4{
 header{
     background-color: black;
     color: white;
-    display: flex;
+    display: flex;  
     height: 119px;
 }
 
@@ -47,12 +52,12 @@ header img{
     padding: 5%;
 }
 
-header a {
+header a,#black-jack a {
     text-decoration: none;
     color: white;
 }
 
-header a:hover {
+header a:hover,#black-jack a:hover, .lien a:hover {
     background: linear-gradient(90deg,rgba(255, 215, 0, 1) 0%, rgba(255, 184, 36, 1) 15%, rgba(255, 221, 51, 1) 30%, rgba(255, 231, 115, 1) 45%, rgba(255, 221, 51, 1) 60%, rgba(255, 184, 36, 1) 75%, rgba(237, 221, 83, 1) 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -78,4 +83,65 @@ header p{
     display: flex;
     align-items: center;
     margin-right: 5%;
+}
+
+/* footer */
+footer{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 1200px;
+    justify-content:center;
+}
+
+.info1{
+    display: flex;
+    padding: 30px 0px;
+    flex-direction: column;
+    width: calc((100% - 90px) / 4);
+}
+
+.info2{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px;
+}
+
+.info3{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0px;
+}
+
+.lien a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(120, 23, 23);
+    font-size: 24px;
+}
+
+.container h3{
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+.prevention{
+    background-color: #d9bf2f;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 0px;
+    align-items: center;
+    color: black;
 }

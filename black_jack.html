@@ -17,20 +17,16 @@
         <div class="barre">
             <nav>
                 <a href="index.html"><h2>Accueil</h2></a>
-                <a href=""><h2>Guides</h2></a>
-                <a href=""><h2>Politiques de confidentialité</h2></a>
-                <a href="condition_utilisation.html"><h2>Conditions d'utilisation</h2></a>
+                <a href="guides.html"><h2>Guides</h2></a>
                 <a href="compte.html"><h2>Compte</h2></a>
+                <a href="condition_utilisation.html"><h2>Conditions d'utilisation</h2></a>
+                <a href="politique_de_confidentialite.html"><h2>Politiques de confidentialité</h2></a>                
             </nav>
         </div>
         <p>Solde : €<span class="soldeCourant"></span></p>        
     </header>
     <main>
         <h2>Black Jack</h2>
-        <div class="mise">
-            <input type="number" name="mise" min="20">
-            <button class="miser">Miser</button>
-        </div> 
         <div class="jeu">      
             <div class="dealer_game">
                  <div class="totalcartes">
@@ -38,30 +34,38 @@
                     <p> Total des cartes : <span></span> </p>
                     <!-- pour changer total des cartes parcours : ".dealer_game .totalcartes span" -->
                 </div>
-                
                 <div id="cartes_croupier">
-                    <img src="./assets/images/Cartes/2 trefle.svg" alt="carte 1" data-carte = "1">
-                    <img src="./assets/images/Cartes/Dos de la carte.svg" alt="carte 2" data-carte = "2">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 3" data-carte = "3">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 4" data-carte = "4">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 5" data-carte = "5">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 6" data-carte = "6">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 7" data-carte = "7">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 8" data-carte = "8">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 9" data-carte = "9">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 10" data-carte = "10">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 11" data-carte = "11">                    
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 1" data-carte = "1">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 2" data-carte = "2">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 3" data-carte = "3">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 4" data-carte = "4">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 5" data-carte = "5">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 6" data-carte = "6">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 7" data-carte = "7">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 8" data-carte = "8">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 9" data-carte = "9">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 10" data-carte = "10">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 11" data-carte = "11">
                 </div>
             </div>
             <div class="table-et-boutons">
                 <div class="table">
-                    <p>Mise : <span class="mise_actuelle"></span>€</p> <!-- span permettant d'indiquer la mise acutelle en jeu -->
-                    <p>Argent : <span class="soldeCourant"></span>€</p>
+                    <div class="qui_contient_argent">
+                        <div id="mise">
+                            <p>Mise : <span class="mise_actuelle"></span>€</p> <!-- span permettant d'indiquer la mise acutelle en jeu -->
+                            <div class="mise">
+                                <input type="number" name="mise" min="20">
+                                <button class="miser">Miser</button>
+                            </div>
+                        </div> 
+                        <p>Argent : <span class="soldeCourant"></span>€</p>
+                    </div>
                     <img src="./assets/images/Cartes/Dos de la carte.svg" alt="paquet de carte">
                 </div>
                 <div class="boutons">
                     <button class="piocher"> Piocher une carte </button>
                     <button class="rester">Rester</button>
+                    <button class="rejouer">Rejouer</button>
                 </div>
             </div>
             <div class="player_game">
@@ -71,20 +75,56 @@
                     <!-- pour changer total des cartes parcours : ".play_game .totalcartes span" -->
                 </div>
                 <div id="cartes_joueurs"> <!-- en JS d'afficher ou non les cartes ainsi que changer leur forme(nom de cartes)-->
-                    <img src="./assets/images/Cartes/4 trefle.svg" alt="carte 1" data-carte="1">
-                    <img src="./assets/images/Cartes/10 carreau.svg" alt="carte 2" data-carte="2">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 3" data-carte="3">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 4" data-carte="4">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 5" data-carte="5">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 6" data-carte="6">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 7" data-carte="7">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 8" data-carte="8">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 9" data-carte="9">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 10" data-carte="10">
-                    <img src="./assets/images/Cartes/Rectangle 20.svg" alt="carte 11" data-carte="11">                      
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 1" data-carte="1">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 2" data-carte="2">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 3" data-carte="3">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 4" data-carte="4">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 5" data-carte="5">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 6" data-carte="6">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 7" data-carte="7">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 8" data-carte="8">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 9" data-carte="9">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 10" data-carte="10">
+                    <img src="./assets/images/Cartes/Rectangle 20.svg" class="carte" alt="carte 11" data-carte="11">
                 </div>
             </div>
         </div>
     </main>
+    <div class="bas-page">
+        <footer>
+            <div class="container">
+                <div class="info1">
+                    <h3>Informations<h3>
+                    <div class="lien">
+                        <a href="">Aide</a>
+                        <a href="">Accessibilité</a>
+                    </div>
+                </div>
+                <div class="info2"> 
+                    <h3>Casino<h3>
+                    <div class="lien">
+                        <a href="index.html">Nos jeux</a>
+                        <a href="">Tours gratuits<a>
+                        <a href="">Evenements Casino<a>
+                        <a href="">Jeu sur Mobile<a>
+                    </div>
+                </div>
+                <div class="info3">
+                        <h3>Notre Entreprise<h3>
+                    <div class="lien">
+                        <a href="condition_utilisation.html">A propos</a>
+                        <a href="credits.html">Credits</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="prevention">
+            <h3>Les jeux d'argent et de hasard peuvent être dangereux:
+                Pertes d'argent, conflits familiaux, addiction...
+            </h3>
+            <p>retrouvez nos conseils sur joueurs-info-service.fr(09 74 75 13 13 - Appel non surtaxé)</p>
+            <img src="./assets/images/logo_gouvernement.png" alt="logo gouvernement">
+        </div>
+    </div>
 </body>
 </html>

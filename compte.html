@@ -9,30 +9,36 @@
 </head>
 <body>
     <header>
-        <img src="" alt="LOGO">
-        <h1>Nom du casino</h1>
-        <nav>
-                <a href="index.html">Accueil</a>
-                <a href="">Guides</a>
-                <a href="">Politiques de confidentialité</a>
-                <a href="condition_utilisation.html">Conditions d'utilisation</a>
-                <a href="">Compte</a>
-        </nav>
-        <p>Solde</p>
+        <div class="logo">
+            <img src="./assets/images/logo.png" alt="LOGO">
+            <h1>CASIMENVRAI</h1>
+        </div>
+        <div class="barre">
+            <nav>
+                <a href="index.html"><h2>Accueil</h2></a>
+                <a href="guides.html"><h2>Guides</h2></a>
+                <a href="compte.html"><h2>Compte</h2></a>
+                <a href="condition_utilisation.html"><h2>Conditions d'utilisation</h2></a>
+                <a href=""><h2>Politiques de confidentialité</h2></a>                
+            </nav>
+        </div>
+        <p>Solde</p>        
     </header>
     <main>
-        <div class="photo_de_profil">
-            <img src="./assets/images/photo de profil.jpg" alt="photo de profil">
-        </div>
-        <div class="profil">
-            <div class="informations_personnelles">
+        <div class="information">
+            <div class="profil">
                 <h3>Profil</h3>
-                <p class="prenom">Votre prénom :</p>
-                <p class="nom">Votre nom :</p>
-                <p class="adresse_mail">Votre adresse mail :</p>
-                <p class="date_de_naissance">Votre date de naissance :</p>
+                <div class="photo_informations">
+                    <img src="./assets/images/photo de profil.jpg" alt="photo de profil" class="photo_de_profil">                
+                    <div class="informations_personnelles">
+                        <p class="prenom">Votre prénom :</p>
+                        <p class="nom">Votre nom :</p>
+                        <p class="adresse_mail">Adresse mail :</p>
+                        <p class="date_de_naissance">Date de naissance :</p>
+                    </div>
+                </div>
             </div>
-            <div class="informations_solde">
+            <div class="information_solde">
                 <h3>Argent</h3>
                 <p class="argent_restant">Votre solde actuel est :</p>
                 <p class="paiement">Vos moyens de paiement sont :</p>
